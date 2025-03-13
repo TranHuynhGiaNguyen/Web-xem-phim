@@ -1,0 +1,301 @@
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>LTNMovie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+  </style>
+</head>
+<body class="bg-black text-white">
+  <!-- Hero Section -->
+  <div class="relative h-screen">
+    <img alt="Background image of various movie and series posters" class="absolute inset-0 w-full h-full object-cover opacity-40" src="https://storage.googleapis.com/a1aa/image/PwEXWz2NmFWXbvkzuQGmCjC9o9xS8QnzPJ1uEIjbkpM.jpg" width="1920" height="1080"/>
+    <div class="absolute inset-0 hero-gradient"></div>
+    
+    <div class="relative z-10 flex flex-col h-full max-w-7xl mx-auto px-4">
+      <!-- Navigation Bar -->
+      <nav class="flex justify-between items-center w-full py-6">
+        <a href="#" class="netflix-logo text-5xl font-bold text-red-600 hover:text-red-500 transition">LTNMovie</a>
+        <div class="flex items-center space-x-4">
+          <div class="relative group">
+          <button id="openLoginModal" class="px-6 py-2 text-sm font-bold text-white bg-red-600 rounded hover:bg-red-700 transition duration-300">
+            <a href="login.html"class="px-6 py-2 text-sm font-bold text-white bg-red-600 rounded hover:bg-red-700 transition duration-300">Đăng nhập</a>
+          </button>
+        </div>
+      </nav>
+      
+      <!-- Hero Content -->
+      <div class="flex flex-col items-center justify-center flex-grow text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+          Phim, series không giới hạn và nhiều nội dung khác
+        </h1>
+        <p class="text-xl mb-3">
+          Giá từ 170.000 ₫. Hủy bất kỳ lúc nào.
+        </p>
+        <p class="text-lg mb-6">
+          Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.
+        </p>
+        <div class="flex flex-col sm:flex-row w-full max-w-lg gap-2">
+          <input class="w-full px-5 py-4 text-black rounded focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Địa chỉ email" type="email"/>
+          <button class="whitespace-nowrap px-6 py-4 text-lg font-bold text-white bg-red-600 rounded hover:bg-red-700 transition duration-300 flex items-center justify-center" onclick="document.getElementById('registerModal').style.display='block'">
+            Bắt đầu 
+            <i class="fas fa-chevron-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Trending Section -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+      <i class="fas fa-fire text-red-600 mr-3"></i>
+      Hiện đang thịnh hành
+    </h2>
+    
+    <div class="relative">
+      <div class="flex space-x-4 overflow-x-auto pb-8 scrollbar-hide">
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie1', 'Trung Tâm Chăm Sóc Chấn Thương', 'Một bộ phim Hàn Quốc đầy cảm xúc về cuộc sống của đội ngũ y tế tại một trung tâm chấn thương.')">
+          <img alt="Poster of Trung Tâm Chăm Sóc Chấn Thương" class="w-full h-72 object-cover" src="https://storage.googleapis.com/a1aa/image/A30Aqo3lMq_K5Gs5bgA92Lwu8-gS59oUpOE-wcGWxVE.jpg" width="200" height="300"/>
+          <div class="absolute top-0 right-0 bg-red-600 text-white px-2 py-1 font-bold">HOT</div>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">1</span>
+            <h3 class="font-bold text-sm">Trung Tâm Chăm Sóc Chấn Thương</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie2', 'Tiệm Ăn Của Quỷ', 'Một bộ phim kinh dị Hàn Quốc về một tiệm ăn bí ẩn nơi các linh hồn quỷ dữ tụ tập.')">
+          <img alt="Poster of Tiệm Ăn Của Quỷ" class="w-full h-72 object-cover" src="./media/tieman.jpg" width="200" height="300"/>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">2</span>
+            <h3 class="font-bold text-sm">Tiệm Ăn Của Quỷ</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie3', 'Mai', 'Bộ phim Việt Nam kể về hành trình đầy cảm xúc của cô gái tên Mai.')">
+          <img alt="Poster of Mai" class="w-full h-72 object-cover" src="./media/mai.jpg" width="200" height="300"/>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">3</span>
+            <h3 class="font-bold text-sm">Mai</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie4', 'Khó Đỡ Đành', 'Một bộ phim hài hước và cảm động về những tình huống éo le trong cuộc sống.')">
+          <img alt="Poster of Khó Đỡ Đành" class="w-full h-72 object-cover" src="https://storage.googleapis.com/a1aa/image/P_K6mNYbAtch2QStvw1SD9B8AX4Pjd74AoJ6beaqRtE.jpg" width="200" height="300"/>
+          <div class="absolute top-0 left-0 bg-yellow-500 text-white px-2 py-1 text-xs font-bold">MỚI</div>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">4</span>
+            <h3 class="font-bold text-sm">Khó Đỡ Đành</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie5', 'Trò Chơi Con Mực', 'Series Hàn Quốc nổi tiếng toàn cầu về một trò chơi sinh tồn đầy nguy hiểm.')">
+          <img alt="Poster of Trò Chơi Con Mực" class="w-full h-72 object-cover" src="./media/squid.jpg" width="200" height="300"/>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">5</span>
+            <h3 class="font-bold text-sm">Trò Chơi Con Mực</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie6', 'Venom Kéo Cuối', 'Phần mới nhất trong series phim siêu anh hùng Venom đầy hành động.')">
+          <img alt="Poster of Venom Kéo Cuối" class="w-full h-72 object-cover" src="./media/venom.jpg" width="200" height="300"/>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">6</span>
+            <h3 class="font-bold text-sm">Venom Kéo Cuối</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="movie-card relative min-w-[180px] rounded-md overflow-hidden shadow-lg" onclick="openMovieDetails('movie7', 'Cửu Phúc Lâm Môn', 'Bộ phim Trung Quốc về một gia tộc với chín anh em đầy bí ẩn và quyền lực.')">
+          <img alt="Poster of Cửu Phúc Lâm Môn" class="w-full h-72 object-cover" src="https://storage.googleapis.com/a1aa/image/2uuJDIzY58wsRL7nXNF8wk317bb3rpa9F7uY45KbDAY.jpg" width="200" height="300"/>
+          <div class="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black to-transparent">
+            <span class="text-6xl font-bold drop-shadow-lg text-red-600">7</span>
+            <h3 class="font-bold text-sm">Cửu Phúc Lâm Môn</h3>
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+            <button class="bg-white bg-opacity-30 rounded-full p-3 transform hover:scale-110 transition">
+              <i class="fas fa-play text-white text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 flex items-center justify-end pr-4">
+        <button class="bg-white bg-opacity-30 rounded-full p-2 hover:bg-opacity-50 transition">
+          <i class="fas fa-chevron-right text-white"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Features Section -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+      Thêm lý do để tham gia Netflix
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="feature-card bg-gradient-to-br from-purple-900 to-blue-900 rounded-xl p-6 shadow-lg">
+        <div class="text-red-600 mb-4">
+          <i class="fas fa-tv text-5xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">
+          Thưởng thức trên TV của bạn
+        </h3>
+        <p class="text-gray-300">
+          Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu phát Blu-ray và nhiều thiết bị khác.
+        </p>
+      </div>
+      
+      <div class="feature-card bg-gradient-to-br from-purple-900 to-blue-900 rounded-xl p-6 shadow-lg">
+        <div class="text-red-600 mb-4">
+          <i class="fas fa-download text-5xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">
+          Tải xuống nội dung để xem ngoại tuyến
+        </h3>
+        <p class="text-gray-300">
+          Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để xem.
+        </p>
+      </div>
+      
+      <div class="feature-card bg-gradient-to-br from-purple-900 to-blue-900 rounded-xl p-6 shadow-lg">
+        <div class="text-red-600 mb-4">
+          <i class="fas fa-mobile-alt text-5xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">
+          Xem ở mọi nơi
+        </h3>
+        <p class="text-gray-300">
+          Phát trực tuyến không giới hạn phim và series trên điện thoại, máy tính bảng, máy tính xách tay và TV.
+        </p>
+      </div>
+      
+      <div class="feature-card bg-gradient-to-br from-purple-900 to-blue-900 rounded-xl p-6 shadow-lg">
+        <div class="text-red-600 mb-4">
+          <i class="fas fa-child text-5xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">
+          Tạo hồ sơ cho trẻ em
+        </h3>
+        <p class="text-gray-300">
+          Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích trong một không gian riêng. Tính năng này đi kèm miễn phí với tư cách thành viên của bạn.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FAQ Section -->
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+      Câu hỏi thường gặp
+    </h2>
+    
+    <div class="space-y-4">
+      <div class="faq-item">
+        <button class="flex justify-between items-center w-full p-5 bg-gray-800 hover:bg-gray-700 transition text-left">
+          <span class="text-lg font-medium">Netflix là gì?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="hidden p-5 bg-gray-900">
+          <p>Netflix là dịch vụ phát trực tuyến cung cấp nhiều loại chương trình truyền hình, phim, anime, phim tài liệu đã đoạt giải thưởng và nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="flex justify-between items-center w-full p-5 bg-gray-800 hover:bg-gray-700 transition text-left">
+          <span class="text-lg font-medium">Tôi phải trả bao nhiêu tiền để xem Netflix?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="hidden p-5 bg-gray-900">
+          <p>Xem Netflix trên điện thoại thông minh, máy tính bảng, Smart TV, máy tính xách tay hoặc thiết bị phát trực tuyến của bạn, chỉ với một khoản phí cố định hàng tháng từ 70.000 ₫ đến 260.000 ₫. Không có phụ phí, không có hợp đồng.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="flex justify-between items-center w-full p-5 bg-gray-800 hover:bg-gray-700 transition text-left">
+          <span class="text-lg font-medium">Tôi có thể xem ở đâu?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="hidden p-5 bg-gray-900">
+          <p>Xem mọi lúc, mọi nơi. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay trên trang web netflix.com từ máy tính cá nhân, hoặc trên bất kỳ thiết bị nào có kết nối Internet và có cài đặt ứng dụng Netflix.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto px-4 py-12 text-gray-500">
+    <div class="mb-4">
+      <p>Bạn có câu hỏi? Gọi <a href="#" class="underline">1-844-505-2993</a></p>
+    </div>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm">
+      <div>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Quyền riêng tư</a></li>
+          <li><a href="#" class="hover:underline">Trung tâm trợ giúp</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Tài khoản</a></li>
+          <li><a href="#" class="hover:underline">Việc làm</a></li>
+          <li><a href="#" class="hover:underline">Điều khoản sử dụng</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Phương thức thanh toán</a></li>
+          <li><a href="#" class="hover:underline">Thông tin doanh nghiệp</a></li>
+          <li><a href="#" class="hover:underline">Trung tâm đa phương tiện</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Thẻ quà tặng</a></li>
+          <li><a href="#" class="hover:underline">Kiểm tra tốc độ</a></li>
+          <li><a href="#" class="hover:underline">Chỉ có trên Netflix</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-8 text-sm">
+      <p>© 2025 Netflix, Inc.</p>
+    </div>
+  </footer>
