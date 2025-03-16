@@ -108,3 +108,26 @@ body {
   animation: modalFadeIn 0.3s;
   overflow: hidden;
 }
+
+.movie-details {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.movie-details:target {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.movie-details .bg-gray-900 {
+  background-color: #1f2937;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details a {
+  text-decoration: none;
+}
