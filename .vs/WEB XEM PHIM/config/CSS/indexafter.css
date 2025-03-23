@@ -1,5 +1,18 @@
-
-/* Thêm vào file CSS hoặc trong thẻ <style> */
+.fas.fa-search {
+    font-size: 24px; /* Tăng kích thước biểu tượng tìm kiếm */
+    color: #ffffff; /* Màu biểu tượng */
+  }
+  .input1 {
+    font-size: 16px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    width: 250px;
+    background-color: rgb(255, 255, 255); 
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease; 
+    opacity: 0.7; 
+  }
 .movie-container {
     transition: all 0.5s ease-in-out;
 }
@@ -96,28 +109,19 @@ nav a {
 main {
     padding: 2rem;
 }
-
 .movie-container {
     display: flex;
     flex-direction: column;
 }
-
-@media (min-width: 1024px) {
-    .movie-container {
-        flex-direction: row;
-    }
-    
-    #movie-details {
-        width: 50%;
-    }
-    
-    .movie-image {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-    }
-}
-
+.search-container {
+    position: relative;
+    top: -10px;
+    display: flex;
+    align-items: center;
+  }
+  .search-container i {
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và input */
+  }
 #movie-details {
     display: flex;
     flex-direction: column;
@@ -165,17 +169,13 @@ main {
     gap: 0.5rem;
     width: fit-content;
 }
+.movie-container .movie-decription{
+    align:left;
+}
 
 .movie-image img {
     width: 100%;
 }
-
-@media (min-width: 1024px) {
-    .movie-image img {
-        width: 70%;
-    }
-}
-
 /* Movie carousel styles */
 .movie-carousel {
     margin-top: 2rem;
@@ -406,3 +406,48 @@ main {
       font-weight: bold;
       color: #ffffff;
   }
+  body {
+    background-image: url('../media/backgroundafter.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+}
+@media (min-width: 1024px) {
+    .movie-container {
+        flex-direction: row;
+    }
+    
+    #movie-details {
+        width: 50%;
+    }
+    
+    .movie-image {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+/* Desktop */
+body { font-size: 16px; }
+h1 { font-size: 36px; }
+
+/* Tablet */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  h1 { font-size: 32px; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  h1 { font-size: 28px; }
+  }
+  
+@media (min-width: 1024px) {
+    .movie-image img {
+        width: 70%;
+    }
+}
+
