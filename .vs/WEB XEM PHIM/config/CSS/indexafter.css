@@ -429,6 +429,34 @@ main {
         justify-content: flex-end;
     }
 }
+/*Search*/
+.container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  /*icon bên phải*/
+  
 /* Desktop */
 body { font-size: 16px; }
 h1 { font-size: 36px; }
@@ -448,6 +476,118 @@ h1 { font-size: 36px; }
 @media (min-width: 1024px) {
     .movie-image img {
         width: 70%;
+    }
+    ul.example-2 {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column; 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 1000;
+    }
+    
+    .example-2 .icon-content {
+        margin: 10px 0; 
+        position: relative;
+        padding: 0.5rem;
+    }
+    
+    .example-2 .icon-content .tooltip {
+        position: absolute;
+        right: 100%; 
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 14px;
+        background-color: rgba(0,0,0,0.7);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+    
+    .example-2 .icon-content:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .example-2 .icon-content a:hover {
+        transform: scale(1.1);
+        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    }
+    
+    .example-2 .icon-content a svg {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .example-2 .icon-content a:hover {
+        color: white;
+    }
+    
+    .example-2 .icon-content a .filled {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #000;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .example-2 .icon-content a:hover .filled {
+        height: 100%;
+    }
+    
+    .example-2 .icon-content a[data-social="linkedin"] .filled,
+    .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+        background-color: #0274b3;
+    }
+    
+    .example-2 .icon-content a[data-social="github"] .filled,
+    .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+        background-color: #24262a;
+    }
+    
+    .example-2 .icon-content a[data-social="facebook"] .filled,
+    .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+        background: linear-gradient(
+            45deg,
+            #002aff,
+            #1100ff,
+            #0228ff,
+            #2f00ff,
+            #1900ff,
+            #0400ff
+        );
+    }
+    
+    .example-2 .icon-content a[data-social="youtube"] .filled,
+    .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+        background-color: #ff0000;
     }
 }
 
