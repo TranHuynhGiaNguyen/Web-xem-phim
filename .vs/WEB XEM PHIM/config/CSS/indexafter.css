@@ -562,11 +562,6 @@ h1 { font-size: 36px; }
         height: 100%;
     }
     
-    .example-2 .icon-content a[data-social="linkedin"] .filled,
-    .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-        background-color: #0274b3;
-    }
-    
     .example-2 .icon-content a[data-social="github"] .filled,
     .example-2 .icon-content a[data-social="github"] ~ .tooltip {
         background-color: #24262a;
