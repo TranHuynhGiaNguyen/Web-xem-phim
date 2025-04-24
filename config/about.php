@@ -11,7 +11,6 @@
         <ul>
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="login.php">Đăng nhập</a></li>
-            <li><a href="#">Chăm sóc khách hàng</a></li>
         </ul>
     </nav>
     
@@ -37,7 +36,7 @@
                 <br>
                 <h3>Về chúng em</h3>
                 <p>Chúng em thuộc nhóm 11, xin phép được giới thiệu các thành viên và bài tập lớn của nhóm.</p>
-                <p>Đầu tiên là Trần Huỳnh Gia Nguyễn, trưởng nhóm, phụ trách thiết kế giao diện, Fontend, Backend và phân chia công việc.</p>
+                <p>Đầu tiên là Trần Huỳnh Gia Nguyễn, phụ trách thiết kế giao diện, Fontend, Backend và phân chia công việc.</p>
                 <p>Tiếp theo là Võ Hoàng Long, đảm nhiệm phần lập trình phía Backend</p>
                 <p>Nguyễn Hoàng Thoại là người chịu trách nhiệm lập trình Backend</p>
                 <p>Cuối cùng là Trần Hoài Nam, hỗ trợ kiểm thử và Backend.</p>
@@ -60,7 +59,7 @@
                                 <img src="./media/gianguyen.jpg" alt="Trần Huỳnh Gia Nguyễn" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <h3>Trần Huỳnh Gia Nguyễn</h3>
-                            <p>Trưởng nhóm</p>
+                            <p>Thành viên</p>
                             <p>Phụ trách front-end</p>
                         </div>
                         <div class="team-member">

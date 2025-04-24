@@ -683,3 +683,28 @@ h1 { font-size: 36px; }
     background: #e0e0e0;
     color: #000;
 }
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.movie-card {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,322 @@
+body {
+  background-image: url('../media/anhmota.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #202020;
+  border-bottom: 1px solid #333;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.search-container {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+/* Main content styles */
+main {
+  padding: 0;
+}
+
+/* Movie details styles */
+#movie-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  min-height: 600px;
+}
+
+#movie-title {
+  font-size: 3.5rem;
+  color: #0ce;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+#movie-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+#movie-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 90%;
+  width: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#movie-duration, #movie-category, #movie-country {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+/* From Uiverse.io by mrhyddenn */ 
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+.button:active,
+.button:focus {
+  outline: none;
+}
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #46ff56;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+
+/* Quality and rating badges */
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badge-hd {
+  background-color: #444;
+}
+
+.badge-age {
+  background-color: #4ab54a;
+}
+
+/* Movie list and cards */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 2rem;
+}
+
+.movie-card {
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-card h3 {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  #movie-details {
+      padding-right: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  #movie-title {
+      font-size: 2.5rem;
+  }
+  
+  #movie-image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+  }
+  
+  #movie-details {
+      background: #1a1d29;
+  }
+}
+nav {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  right: -10%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+  white-space: nowrap; /* Giữ chữ không bị xuống dòng */
+}
+
+/* Hover effect */
+.Btn:hover {
+  width: 200px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+/* Click effect */
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+.logout-btn {
+  background-color: #f56565;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
